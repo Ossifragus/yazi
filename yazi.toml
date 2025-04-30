@@ -68,7 +68,7 @@ emacs = [
 # [open]
 [open]
 append_rules = [
-        { mime = "text/*", use = [ "emacs", "open" ] },
+        { name = "*", use = [ "open", "emacs" ] },
 ]
 # rules = [
 # 	# Folder
