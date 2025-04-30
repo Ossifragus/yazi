@@ -39,7 +39,7 @@ edit = [
 # 	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
 ]
 emacs = [
-	{ run = 'emacs "$1"', orphan = true, desc = "Emacs", block = false, for = "linux" },
+	{ run = 'emacs "$1"', orphan = true, desc = "Emacs", block = true, for = "linux" },
 	{ run = 'emacs "$@"', orphan = true, desc = "Emacs", block = false, for = "macos" },
 ]
 # open = [
