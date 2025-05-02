@@ -98,7 +98,10 @@ append_rules = [
 # image_bound      = [ 0, 0 ]
 # suppress_preload = false
 
-# [plugin]
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+]
 # fetchers = [
 # 	# Mimetype
 # 	{ id = "mime", name = "*", run = "mime", prio = "high" },
