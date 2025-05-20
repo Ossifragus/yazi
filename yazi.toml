@@ -42,6 +42,10 @@ emacs = [
 	{ run = 'emacs "$1"', orphan = true, desc = "Emacs", block = true, for = "linux" },
 	{ run = 'emacs "$@"', orphan = true, desc = "Emacs", block = false, for = "macos" },
 ]
+emacscnw = [
+	{ run = 'emacsclient "$1" -nw', orphan = true, desc = "Emacsc-nw", block = true, for = "linux" },
+	{ run = 'emacsclient "$@" -nw', orphan = true, desc = "Emacsc-nw", block = false, for = "macos" },
+]
 # open = [
 # 	{ run = 'xdg-open "$1"',                desc = "Open", for = "linux" },
 # 	{ run = 'open "$@"',                    desc = "Open", for = "macos" },
@@ -68,7 +72,7 @@ emacs = [
 # [open]
 [open]
 append_rules = [
-        { name = "*", use = [ "open", "emacs" ] },
+        { name = "*", use = [ "open", "emacs", "emacscnw" ] },
 ]
 # rules = [
 # 	# Folder
