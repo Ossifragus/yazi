@@ -50,6 +50,11 @@ on   = "T"
 run  = "plugin toggle-pane min-preview"
 desc = "Show or hide the preview pane"
 
+[[mgr.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
 # [manager]
 
 # keymap = [
