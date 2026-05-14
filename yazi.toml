@@ -51,7 +51,7 @@ emacscnw = [
 	{ run = 'emacsclient "$@" -nw', orphan = true, desc = "Emacsc-nw", block = false, for = "macos" },
 ]
 open = [
-	{ run = "xdg-open %s1",    desc = "Open", for = "linux" },
+	{ run = "xdg-open %s1", orphan = true, desc = "Open", for = "linux" },
 	{ run = "open %s",         desc = "Open", for = "macos" },
 	{ run = 'start "" %s1',    desc = "Open", for = "windows", orphan = true },
 	{ run = "termux-open %s1", desc = "Open", for = "android" },
