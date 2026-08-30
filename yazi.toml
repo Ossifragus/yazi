@@ -43,12 +43,10 @@ play = [
 	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
 ]
 emacs = [
-	{ run = 'emacs "$1"', orphan = true, desc = "Emacs", block = true, for = "linux" },
-	{ run = 'emacs "$@"', orphan = true, desc = "Emacs", block = false, for = "macos" },
+	{ run = 'emacs %s', orphan = true, desc = "Emacs", for = "unix" },
 ]
 emacscnw = [
-	{ run = 'emacsclient "$1" -nw', orphan = true, desc = "Emacsc-nw", block = true, for = "linux" },
-	{ run = 'emacsclient "$@" -nw', orphan = true, desc = "Emacsc-nw", block = false, for = "macos" },
+	{ run = 'emacsclient -nw %s', block = true, desc = "Emacsc-nw", for = "unix" },
 ]
 open = [
 	{ run = "xdg-open %s1", orphan = true, desc = "Open", for = "linux" },
